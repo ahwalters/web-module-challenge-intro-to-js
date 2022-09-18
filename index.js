@@ -86,8 +86,8 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(age){
+  return (age * 7)
 }
 
 
@@ -151,7 +151,7 @@ function hungryDog(weight, age){
   return (weight * 0.04)
   if (weight <= 15)
   return (weight * 0.03)
-  if (weight < 15)
+  if (weight > 15)
   return (weight * 0.02)
 
 }
@@ -184,7 +184,9 @@ if (compChoice <= 0.33){
 else if (compChoice <=0.67){
   compChoice = "paper"
 }
-else compChoice = "scissors"
+else if (compChoice <= 1){
+  compChoice = "scissors"
+}
 
 
 function game(user, computer){
@@ -196,7 +198,7 @@ function game(user, computer){
   return "you win!"
   else if (user === "paper" && computer == "rock")
   return "you win!"
-  else if (user === "paper" && computer == "scissords")
+  else if (user === "paper" && computer == "scissors")
   return "you lose!"
   else if (user === "scissors" && computer == "paper")
   return "you win!"
@@ -217,7 +219,7 @@ Using the miles function below do the following:
 */
 
 function miles(kilometers){
-  return (kilometers * 0.6214)
+  return (kilometers * 0.621371)
 }
 
 
@@ -230,7 +232,7 @@ Using the feet function below do the following:
 */
 
 function feet(Centimeters){
-  return (Centimeters * 0.0328084)
+  return (Centimeters / 30.48)
 }
 
 
@@ -249,11 +251,11 @@ Using the annoyingSong function below do the following:
 */
 
 function annoyingSong(bottles){
-      return ` ${bottles} bottles of soda on the wall, ${bottles} bottles of soda, take one down pass it around ${bottles - 1} bottles of soda on the wall`
+      return `${bottles} bottles of soda on the wall, ${bottles} bottles of soda, take one down pass it around ${bottles - 1} bottles of soda on the wall`
 }
 
 for (let i = 0; i >1; i--){
-  return ` ${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i - 1} bottles of soda on the wall`
+  console.log( `${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i - 1} bottles of soda on the wall`)
 }
 
 
@@ -281,7 +283,7 @@ function grade(score){
   return "you got a C"
   else if (score >= 60)
   return "you got a D"
-  else if (score < 60>)
+  else if (score < 60)
   return "you got an F"
 }
 
