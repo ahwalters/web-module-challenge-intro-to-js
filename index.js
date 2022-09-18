@@ -20,7 +20,10 @@ Do the following:
    HINT: no function required
 */
 
-
+var votingAge = 24;
+if (votingAge > 18){
+  console.log("task 1a: true")
+}
 
 /*
 Task 1b - Values (not auto tested)
@@ -34,8 +37,13 @@ Do the following:
    HINT: no function required
 */
 
+var firstThing = 2
+var secondThing = 2
+if (firstThing === secondThing){
+  firstThing = 3
+}
 
-
+console.log("task 1b: " + firstThing);
 
 
 /*
@@ -49,7 +57,8 @@ Do the following:
    HINT: look up the Number method
 */
 
-
+var year = "1999"
+console.log("task 1c: " + Number(year));
 
 
 /*
@@ -129,10 +138,23 @@ NOTE 2: This is a great time to check the tests to see what it expects, versus w
         So, on this one test, the weight would be 4 pounds, and the age would be 1 years old. It's expecting your function to return a decimal number of 0.2
 */  
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
-}
+function hungryDog(weight, age){
+  if (age <0.33)
+  return (weight * 0.1)
+  if (age <0.58)
+  return (weight * 0.05)
+  if (age <1)
+  return (weight * 0.04)
+  if (weight <= 5)
+  return (weight * 0.05)
+  if (weight <= 10)
+  return (weight * 0.04)
+  if (weight <= 15)
+  return (weight * 0.03)
+  if (weight < 15)
+  return (weight * 0.02)
 
+}
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -155,11 +177,32 @@ Use the game function below to do the following:
 
 RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors | Or there's a tie
 */
+var compChoice = Math.random();
+if (compChoice <= 0.33){
+  compChoice = "rock"
+}
+else if (compChoice <=0.67){
+  compChoice = "paper"
+}
+else compChoice = "scissors"
+
 
 function game(user, computer){
-  /*add your code here*/
+  if (user === computer)
+  return "it's a tie"
+  else if (user === "rock" && computer == "paper")
+  return "you lose!"
+  else if (user === "rock" && computer == "scissors")
+  return "you win!"
+  else if (user === "paper" && computer == "rock")
+  return "you win!"
+  else if (user === "paper" && computer == "scissords")
+  return "you lose!"
+  else if (user === "scissors" && computer == "paper")
+  return "you win!"
+  else if (user === "scissors" && computer == "rock")
+  return "you lose!"
 }
-
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -173,10 +216,9 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
+function miles(kilometers){
+  return (kilometers * 0.6214)
 }
-
 
 
 //Task 5b - Centimeters to Feet
@@ -187,10 +229,9 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-  /*add your code here*/
+function feet(Centimeters){
+  return (Centimeters * 0.0328084)
 }
-
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -207,8 +248,12 @@ Using the annoyingSong function below do the following:
 4. Each time the annoyingSong is run from this loop, it should console.log the string that was returned. 
 */
 
-function annoyingSong(/*add your code here*/){
-      /*add your code here*/
+function annoyingSong(bottles){
+      return ` ${bottles} bottles of soda on the wall, ${bottles} bottles of soda, take one down pass it around ${bottles - 1} bottles of soda on the wall`
+}
+
+for (let i = 0; i >1; i--){
+  return ` ${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i - 1} bottles of soda on the wall`
 }
 
 
@@ -227,8 +272,17 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
-/*Your Code here */
+function grade(score){
+  if (score >= 90)
+  return "you got an A"
+  else if (score >= 80)
+  return "you got a B"
+  else if (score >= 70)
+  return "you got a C"
+  else if (score >= 60)
+  return "you got a D"
+  else if (score < 60>)
+  return "you got an F"
 }
 
 
